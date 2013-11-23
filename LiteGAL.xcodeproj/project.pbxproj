@@ -1,0 +1,759 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C62C903E183F240500994EBC /* LiteGALScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = C62C903D183F240500994EBC /* LiteGALScreen.m */; };
+		C62C903F183F240500994EBC /* LiteGALScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = C62C903D183F240500994EBC /* LiteGALScreen.m */; };
+		C62C9042183F2B6F00994EBC /* ScreenFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C62C9041183F2B6F00994EBC /* ScreenFactory.m */; };
+		C62C9043183F2B6F00994EBC /* ScreenFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C62C9041183F2B6F00994EBC /* ScreenFactory.m */; };
+		C66238E0183DEB160047CA50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66238DF183DEB160047CA50 /* Foundation.framework */; };
+		C66238E2183DEB160047CA50 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66238E1183DEB160047CA50 /* CoreGraphics.framework */; };
+		C66238E4183DEB160047CA50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66238E3183DEB160047CA50 /* UIKit.framework */; };
+		C66238E6183DEB160047CA50 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66238E5183DEB160047CA50 /* CoreData.framework */; };
+		C66238EC183DEB160047CA50 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C66238EA183DEB160047CA50 /* InfoPlist.strings */; };
+		C66238EE183DEB160047CA50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C66238ED183DEB160047CA50 /* main.m */; };
+		C66238F2183DEB160047CA50 /* LiteGALAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C66238F1183DEB160047CA50 /* LiteGALAppDelegate.m */; };
+		C66238F7183DEB160047CA50 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C66238F6183DEB160047CA50 /* Images.xcassets */; };
+		C66238FE183DEB160047CA50 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66238FD183DEB160047CA50 /* XCTest.framework */; };
+		C66238FF183DEB160047CA50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66238DF183DEB160047CA50 /* Foundation.framework */; };
+		C6623900183DEB160047CA50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66238E3183DEB160047CA50 /* UIKit.framework */; };
+		C6623901183DEB160047CA50 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66238E5183DEB160047CA50 /* CoreData.framework */; };
+		C6623909183DEB160047CA50 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6623907183DEB160047CA50 /* InfoPlist.strings */; };
+		C662390B183DEB160047CA50 /* LiteGALTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C662390A183DEB160047CA50 /* LiteGALTests.m */; };
+		C6623916183DEC230047CA50 /* LiteGAL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6623914183DEC230047CA50 /* LiteGAL.xcdatamodeld */; };
+		C6623917183DEC230047CA50 /* LiteGAL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6623914183DEC230047CA50 /* LiteGAL.xcdatamodeld */; };
+		C662391A183DF0940047CA50 /* SaveFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C6623919183DF0940047CA50 /* SaveFile.m */; };
+		C662391B183DF0940047CA50 /* SaveFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C6623919183DF0940047CA50 /* SaveFile.m */; };
+		C662391E183DF0950047CA50 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = C662391D183DF0950047CA50 /* Character.m */; };
+		C662391F183DF0950047CA50 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = C662391D183DF0950047CA50 /* Character.m */; };
+		C6623921183DF0E20047CA50 /* 0.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623920183DF0E20047CA50 /* 0.plist */; };
+		C6623922183DF0E20047CA50 /* 0.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623920183DF0E20047CA50 /* 0.plist */; };
+		C6623929183DF19C0047CA50 /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623928183DF19C0047CA50 /* 1.plist */; };
+		C662392A183DF19C0047CA50 /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623928183DF19C0047CA50 /* 1.plist */; };
+		C662392C183DF1A70047CA50 /* 2.plist in Resources */ = {isa = PBXBuildFile; fileRef = C662392B183DF1A70047CA50 /* 2.plist */; };
+		C662392D183DF1A70047CA50 /* 2.plist in Resources */ = {isa = PBXBuildFile; fileRef = C662392B183DF1A70047CA50 /* 2.plist */; };
+		C662392F183DF1E40047CA50 /* 3.plist in Resources */ = {isa = PBXBuildFile; fileRef = C662392E183DF1E40047CA50 /* 3.plist */; };
+		C6623930183DF1E40047CA50 /* 3.plist in Resources */ = {isa = PBXBuildFile; fileRef = C662392E183DF1E40047CA50 /* 3.plist */; };
+		C6623932183DF1EA0047CA50 /* 4.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623931183DF1EA0047CA50 /* 4.plist */; };
+		C6623933183DF1EA0047CA50 /* 4.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623931183DF1EA0047CA50 /* 4.plist */; };
+		C6623935183DF1F00047CA50 /* 5.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623934183DF1F00047CA50 /* 5.plist */; };
+		C6623936183DF1F00047CA50 /* 5.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623934183DF1F00047CA50 /* 5.plist */; };
+		C6623938183DF1F70047CA50 /* 6.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623937183DF1F70047CA50 /* 6.plist */; };
+		C6623939183DF1F70047CA50 /* 6.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623937183DF1F70047CA50 /* 6.plist */; };
+		C662393B183DF1FE0047CA50 /* 7.plist in Resources */ = {isa = PBXBuildFile; fileRef = C662393A183DF1FE0047CA50 /* 7.plist */; };
+		C662393C183DF1FE0047CA50 /* 7.plist in Resources */ = {isa = PBXBuildFile; fileRef = C662393A183DF1FE0047CA50 /* 7.plist */; };
+		C6623950183E09300047CA50 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = C6623944183E09300047CA50 /* 11.png */; };
+		C6623951183E09300047CA50 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = C6623944183E09300047CA50 /* 11.png */; };
+		C6623952183E09300047CA50 /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = C6623945183E09300047CA50 /* 12.png */; };
+		C6623953183E09300047CA50 /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = C6623945183E09300047CA50 /* 12.png */; };
+		C6623954183E09300047CA50 /* 21.png in Resources */ = {isa = PBXBuildFile; fileRef = C6623946183E09300047CA50 /* 21.png */; };
+		C6623955183E09300047CA50 /* 21.png in Resources */ = {isa = PBXBuildFile; fileRef = C6623946183E09300047CA50 /* 21.png */; };
+		C6623956183E09300047CA50 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = C6623947183E09300047CA50 /* 22.png */; };
+		C6623957183E09300047CA50 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = C6623947183E09300047CA50 /* 22.png */; };
+		C6623958183E09300047CA50 /* 31.png in Resources */ = {isa = PBXBuildFile; fileRef = C6623948183E09300047CA50 /* 31.png */; };
+		C6623959183E09300047CA50 /* 31.png in Resources */ = {isa = PBXBuildFile; fileRef = C6623948183E09300047CA50 /* 31.png */; };
+		C662395A183E09300047CA50 /* 32.png in Resources */ = {isa = PBXBuildFile; fileRef = C6623949183E09300047CA50 /* 32.png */; };
+		C662395B183E09300047CA50 /* 32.png in Resources */ = {isa = PBXBuildFile; fileRef = C6623949183E09300047CA50 /* 32.png */; };
+		C662395C183E09300047CA50 /* 41.png in Resources */ = {isa = PBXBuildFile; fileRef = C662394A183E09300047CA50 /* 41.png */; };
+		C662395D183E09300047CA50 /* 41.png in Resources */ = {isa = PBXBuildFile; fileRef = C662394A183E09300047CA50 /* 41.png */; };
+		C662395E183E09300047CA50 /* 42.png in Resources */ = {isa = PBXBuildFile; fileRef = C662394B183E09300047CA50 /* 42.png */; };
+		C662395F183E09300047CA50 /* 42.png in Resources */ = {isa = PBXBuildFile; fileRef = C662394B183E09300047CA50 /* 42.png */; };
+		C6623960183E09300047CA50 /* 51.png in Resources */ = {isa = PBXBuildFile; fileRef = C662394C183E09300047CA50 /* 51.png */; };
+		C6623961183E09300047CA50 /* 51.png in Resources */ = {isa = PBXBuildFile; fileRef = C662394C183E09300047CA50 /* 51.png */; };
+		C6623962183E09300047CA50 /* 52.png in Resources */ = {isa = PBXBuildFile; fileRef = C662394D183E09300047CA50 /* 52.png */; };
+		C6623963183E09300047CA50 /* 52.png in Resources */ = {isa = PBXBuildFile; fileRef = C662394D183E09300047CA50 /* 52.png */; };
+		C6623964183E09300047CA50 /* 61.png in Resources */ = {isa = PBXBuildFile; fileRef = C662394E183E09300047CA50 /* 61.png */; };
+		C6623965183E09300047CA50 /* 61.png in Resources */ = {isa = PBXBuildFile; fileRef = C662394E183E09300047CA50 /* 61.png */; };
+		C6623966183E09300047CA50 /* 71.png in Resources */ = {isa = PBXBuildFile; fileRef = C662394F183E09300047CA50 /* 71.png */; };
+		C6623967183E09300047CA50 /* 71.png in Resources */ = {isa = PBXBuildFile; fileRef = C662394F183E09300047CA50 /* 71.png */; };
+		C6623969183E09CE0047CA50 /* testtext.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623968183E09CE0047CA50 /* testtext.plist */; };
+		C662396A183E09CE0047CA50 /* testtext.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623968183E09CE0047CA50 /* testtext.plist */; };
+		C6623972183E30A40047CA50 /* LiteGALTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6623971183E30A40047CA50 /* LiteGALTabBarViewController.m */; };
+		C6623974183E31750047CA50 /* iPhone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6623973183E31740047CA50 /* iPhone5.storyboard */; };
+		C6623975183E31750047CA50 /* iPhone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6623973183E31740047CA50 /* iPhone5.storyboard */; };
+		C6623978183E346A0047CA50 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6623977183E346A0047CA50 /* GameViewController.m */; };
+		C6623979183E346A0047CA50 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6623977183E346A0047CA50 /* GameViewController.m */; };
+		C6623980183E49030047CA50 /* GameImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C662397F183E49030047CA50 /* GameImageView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C6623902183DEB160047CA50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C66238D4183DEB150047CA50 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C66238DB183DEB150047CA50;
+			remoteInfo = LiteGAL;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C62C903C183F240500994EBC /* LiteGALScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiteGALScreen.h; sourceTree = "<group>"; };
+		C62C903D183F240500994EBC /* LiteGALScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiteGALScreen.m; sourceTree = "<group>"; };
+		C62C9040183F2B6F00994EBC /* ScreenFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenFactory.h; sourceTree = "<group>"; };
+		C62C9041183F2B6F00994EBC /* ScreenFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenFactory.m; sourceTree = "<group>"; };
+		C66238DC183DEB150047CA50 /* LiteGAL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiteGAL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C66238DF183DEB160047CA50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C66238E1183DEB160047CA50 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C66238E3183DEB160047CA50 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C66238E5183DEB160047CA50 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C66238E9183DEB160047CA50 /* LiteGAL-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LiteGAL-Info.plist"; sourceTree = "<group>"; };
+		C66238EB183DEB160047CA50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C66238ED183DEB160047CA50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C66238EF183DEB160047CA50 /* LiteGAL-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LiteGAL-Prefix.pch"; sourceTree = "<group>"; };
+		C66238F0183DEB160047CA50 /* LiteGALAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiteGALAppDelegate.h; sourceTree = "<group>"; };
+		C66238F1183DEB160047CA50 /* LiteGALAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiteGALAppDelegate.m; sourceTree = "<group>"; };
+		C66238F6183DEB160047CA50 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C66238FC183DEB160047CA50 /* LiteGALTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiteGALTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C66238FD183DEB160047CA50 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C6623906183DEB160047CA50 /* LiteGALTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LiteGALTests-Info.plist"; sourceTree = "<group>"; };
+		C6623908183DEB160047CA50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C662390A183DEB160047CA50 /* LiteGALTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiteGALTests.m; sourceTree = "<group>"; };
+		C6623915183DEC230047CA50 /* LiteGAL.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LiteGAL.xcdatamodel; sourceTree = "<group>"; };
+		C6623918183DF0940047CA50 /* SaveFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveFile.h; sourceTree = "<group>"; };
+		C6623919183DF0940047CA50 /* SaveFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveFile.m; sourceTree = "<group>"; };
+		C662391C183DF0950047CA50 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		C662391D183DF0950047CA50 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
+		C6623920183DF0E20047CA50 /* 0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 0.plist; sourceTree = "<group>"; };
+		C6623928183DF19C0047CA50 /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
+		C662392B183DF1A70047CA50 /* 2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 2.plist; sourceTree = "<group>"; };
+		C662392E183DF1E40047CA50 /* 3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 3.plist; sourceTree = "<group>"; };
+		C6623931183DF1EA0047CA50 /* 4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 4.plist; sourceTree = "<group>"; };
+		C6623934183DF1F00047CA50 /* 5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 5.plist; sourceTree = "<group>"; };
+		C6623937183DF1F70047CA50 /* 6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 6.plist; sourceTree = "<group>"; };
+		C662393A183DF1FE0047CA50 /* 7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 7.plist; sourceTree = "<group>"; };
+		C6623944183E09300047CA50 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
+		C6623945183E09300047CA50 /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
+		C6623946183E09300047CA50 /* 21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 21.png; sourceTree = "<group>"; };
+		C6623947183E09300047CA50 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22.png; sourceTree = "<group>"; };
+		C6623948183E09300047CA50 /* 31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 31.png; sourceTree = "<group>"; };
+		C6623949183E09300047CA50 /* 32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 32.png; sourceTree = "<group>"; };
+		C662394A183E09300047CA50 /* 41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 41.png; sourceTree = "<group>"; };
+		C662394B183E09300047CA50 /* 42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 42.png; sourceTree = "<group>"; };
+		C662394C183E09300047CA50 /* 51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 51.png; sourceTree = "<group>"; };
+		C662394D183E09300047CA50 /* 52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 52.png; sourceTree = "<group>"; };
+		C662394E183E09300047CA50 /* 61.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 61.png; sourceTree = "<group>"; };
+		C662394F183E09300047CA50 /* 71.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 71.png; sourceTree = "<group>"; };
+		C6623968183E09CE0047CA50 /* testtext.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = testtext.plist; sourceTree = "<group>"; };
+		C6623970183E30A40047CA50 /* LiteGALTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiteGALTabBarViewController.h; sourceTree = "<group>"; };
+		C6623971183E30A40047CA50 /* LiteGALTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiteGALTabBarViewController.m; sourceTree = "<group>"; };
+		C6623973183E31740047CA50 /* iPhone5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone5.storyboard; path = ../iPhone5.storyboard; sourceTree = "<group>"; };
+		C6623976183E346A0047CA50 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		C6623977183E346A0047CA50 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		C662397E183E49030047CA50 /* GameImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameImageView.h; sourceTree = "<group>"; };
+		C662397F183E49030047CA50 /* GameImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameImageView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C66238D9183DEB150047CA50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66238E2183DEB160047CA50 /* CoreGraphics.framework in Frameworks */,
+				C66238E6183DEB160047CA50 /* CoreData.framework in Frameworks */,
+				C66238E4183DEB160047CA50 /* UIKit.framework in Frameworks */,
+				C66238E0183DEB160047CA50 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66238F9183DEB160047CA50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66238FE183DEB160047CA50 /* XCTest.framework in Frameworks */,
+				C6623901183DEB160047CA50 /* CoreData.framework in Frameworks */,
+				C6623900183DEB160047CA50 /* UIKit.framework in Frameworks */,
+				C66238FF183DEB160047CA50 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C66238D3183DEB150047CA50 = {
+			isa = PBXGroup;
+			children = (
+				C66238E7183DEB160047CA50 /* LiteGAL */,
+				C6623904183DEB160047CA50 /* LiteGALTests */,
+				C66238DE183DEB150047CA50 /* Frameworks */,
+				C66238DD183DEB150047CA50 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C66238DD183DEB150047CA50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C66238DC183DEB150047CA50 /* LiteGAL.app */,
+				C66238FC183DEB160047CA50 /* LiteGALTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C66238DE183DEB150047CA50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C66238DF183DEB160047CA50 /* Foundation.framework */,
+				C66238E1183DEB160047CA50 /* CoreGraphics.framework */,
+				C66238E3183DEB160047CA50 /* UIKit.framework */,
+				C66238E5183DEB160047CA50 /* CoreData.framework */,
+				C66238FD183DEB160047CA50 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C66238E7183DEB160047CA50 /* LiteGAL */ = {
+			isa = PBXGroup;
+			children = (
+				C6941D65183FA324004F8BD9 /* Model */,
+				C6941D64183FA2F0004F8BD9 /* CoreDataModel */,
+				C6941D63183FA2E4004F8BD9 /* View */,
+				C6941D62183FA2C7004F8BD9 /* LiteGALControler */,
+				C6941D61183FA2AC004F8BD9 /* ViewController */,
+				C66238F0183DEB160047CA50 /* LiteGALAppDelegate.h */,
+				C66238F1183DEB160047CA50 /* LiteGALAppDelegate.m */,
+				C6623973183E31740047CA50 /* iPhone5.storyboard */,
+				C6623914183DEC230047CA50 /* LiteGAL.xcdatamodeld */,
+				C66238F6183DEB160047CA50 /* Images.xcassets */,
+				C66238E8183DEB160047CA50 /* Supporting Files */,
+			);
+			path = LiteGAL;
+			sourceTree = "<group>";
+		};
+		C66238E8183DEB160047CA50 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C662393D183DF5890047CA50 /* Screen */,
+				C6623927183DF1560047CA50 /* Configuration */,
+				C6623926183DF13A0047CA50 /* Music */,
+				C6623925183DF12C0047CA50 /* Text */,
+				C6623924183DF11A0047CA50 /* Picture */,
+				C6623923183DF1070047CA50 /* Branch */,
+				C66238E9183DEB160047CA50 /* LiteGAL-Info.plist */,
+				C66238EA183DEB160047CA50 /* InfoPlist.strings */,
+				C66238ED183DEB160047CA50 /* main.m */,
+				C66238EF183DEB160047CA50 /* LiteGAL-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6623904183DEB160047CA50 /* LiteGALTests */ = {
+			isa = PBXGroup;
+			children = (
+				C662390A183DEB160047CA50 /* LiteGALTests.m */,
+				C6623905183DEB160047CA50 /* Supporting Files */,
+			);
+			path = LiteGALTests;
+			sourceTree = "<group>";
+		};
+		C6623905183DEB160047CA50 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6623906183DEB160047CA50 /* LiteGALTests-Info.plist */,
+				C6623907183DEB160047CA50 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6623923183DF1070047CA50 /* Branch */ = {
+			isa = PBXGroup;
+			children = (
+				C6623920183DF0E20047CA50 /* 0.plist */,
+				C6623928183DF19C0047CA50 /* 1.plist */,
+				C662392B183DF1A70047CA50 /* 2.plist */,
+				C662392E183DF1E40047CA50 /* 3.plist */,
+				C6623931183DF1EA0047CA50 /* 4.plist */,
+				C6623934183DF1F00047CA50 /* 5.plist */,
+				C6623937183DF1F70047CA50 /* 6.plist */,
+				C662393A183DF1FE0047CA50 /* 7.plist */,
+			);
+			name = Branch;
+			sourceTree = "<group>";
+		};
+		C6623924183DF11A0047CA50 /* Picture */ = {
+			isa = PBXGroup;
+			children = (
+				C6623944183E09300047CA50 /* 11.png */,
+				C6623945183E09300047CA50 /* 12.png */,
+				C6623946183E09300047CA50 /* 21.png */,
+				C6623947183E09300047CA50 /* 22.png */,
+				C6623948183E09300047CA50 /* 31.png */,
+				C6623949183E09300047CA50 /* 32.png */,
+				C662394A183E09300047CA50 /* 41.png */,
+				C662394B183E09300047CA50 /* 42.png */,
+				C662394C183E09300047CA50 /* 51.png */,
+				C662394D183E09300047CA50 /* 52.png */,
+				C662394E183E09300047CA50 /* 61.png */,
+				C662394F183E09300047CA50 /* 71.png */,
+			);
+			name = Picture;
+			sourceTree = "<group>";
+		};
+		C6623925183DF12C0047CA50 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				C6623968183E09CE0047CA50 /* testtext.plist */,
+			);
+			name = Text;
+			sourceTree = "<group>";
+		};
+		C6623926183DF13A0047CA50 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
+		C6623927183DF1560047CA50 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		C662393D183DF5890047CA50 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Screen;
+			sourceTree = "<group>";
+		};
+		C6941D61183FA2AC004F8BD9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C6623976183E346A0047CA50 /* GameViewController.h */,
+				C6623977183E346A0047CA50 /* GameViewController.m */,
+				C6623970183E30A40047CA50 /* LiteGALTabBarViewController.h */,
+				C6623971183E30A40047CA50 /* LiteGALTabBarViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		C6941D62183FA2C7004F8BD9 /* LiteGALControler */ = {
+			isa = PBXGroup;
+			children = (
+				C62C9040183F2B6F00994EBC /* ScreenFactory.h */,
+				C62C9041183F2B6F00994EBC /* ScreenFactory.m */,
+			);
+			name = LiteGALControler;
+			sourceTree = "<group>";
+		};
+		C6941D63183FA2E4004F8BD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C662397E183E49030047CA50 /* GameImageView.h */,
+				C662397F183E49030047CA50 /* GameImageView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C6941D64183FA2F0004F8BD9 /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				C662391C183DF0950047CA50 /* Character.h */,
+				C662391D183DF0950047CA50 /* Character.m */,
+				C6623918183DF0940047CA50 /* SaveFile.h */,
+				C6623919183DF0940047CA50 /* SaveFile.m */,
+			);
+			name = CoreDataModel;
+			sourceTree = "<group>";
+		};
+		C6941D65183FA324004F8BD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C62C903C183F240500994EBC /* LiteGALScreen.h */,
+				C62C903D183F240500994EBC /* LiteGALScreen.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C66238DB183DEB150047CA50 /* LiteGAL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C662390E183DEB160047CA50 /* Build configuration list for PBXNativeTarget "LiteGAL" */;
+			buildPhases = (
+				C66238D8183DEB150047CA50 /* Sources */,
+				C66238D9183DEB150047CA50 /* Frameworks */,
+				C66238DA183DEB150047CA50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiteGAL;
+			productName = LiteGAL;
+			productReference = C66238DC183DEB150047CA50 /* LiteGAL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C66238FB183DEB160047CA50 /* LiteGALTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6623911183DEB160047CA50 /* Build configuration list for PBXNativeTarget "LiteGALTests" */;
+			buildPhases = (
+				C66238F8183DEB160047CA50 /* Sources */,
+				C66238F9183DEB160047CA50 /* Frameworks */,
+				C66238FA183DEB160047CA50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6623903183DEB160047CA50 /* PBXTargetDependency */,
+			);
+			name = LiteGALTests;
+			productName = LiteGALTests;
+			productReference = C66238FC183DEB160047CA50 /* LiteGALTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C66238D4183DEB150047CA50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LiteGAL;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Artuira;
+				TargetAttributes = {
+					C66238FB183DEB160047CA50 = {
+						TestTargetID = C66238DB183DEB150047CA50;
+					};
+				};
+			};
+			buildConfigurationList = C66238D7183DEB150047CA50 /* Build configuration list for PBXProject "LiteGAL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C66238D3183DEB150047CA50;
+			productRefGroup = C66238DD183DEB150047CA50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C66238DB183DEB150047CA50 /* LiteGAL */,
+				C66238FB183DEB160047CA50 /* LiteGALTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C66238DA183DEB150047CA50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6623964183E09300047CA50 /* 61.png in Resources */,
+				C6623962183E09300047CA50 /* 52.png in Resources */,
+				C6623958183E09300047CA50 /* 31.png in Resources */,
+				C6623954183E09300047CA50 /* 21.png in Resources */,
+				C6623956183E09300047CA50 /* 22.png in Resources */,
+				C6623974183E31750047CA50 /* iPhone5.storyboard in Resources */,
+				C6623966183E09300047CA50 /* 71.png in Resources */,
+				C6623952183E09300047CA50 /* 12.png in Resources */,
+				C6623950183E09300047CA50 /* 11.png in Resources */,
+				C662392F183DF1E40047CA50 /* 3.plist in Resources */,
+				C6623921183DF0E20047CA50 /* 0.plist in Resources */,
+				C6623932183DF1EA0047CA50 /* 4.plist in Resources */,
+				C662395C183E09300047CA50 /* 41.png in Resources */,
+				C6623960183E09300047CA50 /* 51.png in Resources */,
+				C6623938183DF1F70047CA50 /* 6.plist in Resources */,
+				C662392C183DF1A70047CA50 /* 2.plist in Resources */,
+				C66238EC183DEB160047CA50 /* InfoPlist.strings in Resources */,
+				C662393B183DF1FE0047CA50 /* 7.plist in Resources */,
+				C6623929183DF19C0047CA50 /* 1.plist in Resources */,
+				C6623935183DF1F00047CA50 /* 5.plist in Resources */,
+				C662395E183E09300047CA50 /* 42.png in Resources */,
+				C6623969183E09CE0047CA50 /* testtext.plist in Resources */,
+				C662395A183E09300047CA50 /* 32.png in Resources */,
+				C66238F7183DEB160047CA50 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66238FA183DEB160047CA50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6623965183E09300047CA50 /* 61.png in Resources */,
+				C6623963183E09300047CA50 /* 52.png in Resources */,
+				C6623957183E09300047CA50 /* 22.png in Resources */,
+				C662392A183DF19C0047CA50 /* 1.plist in Resources */,
+				C6623922183DF0E20047CA50 /* 0.plist in Resources */,
+				C6623975183E31750047CA50 /* iPhone5.storyboard in Resources */,
+				C6623959183E09300047CA50 /* 31.png in Resources */,
+				C6623930183DF1E40047CA50 /* 3.plist in Resources */,
+				C662395B183E09300047CA50 /* 32.png in Resources */,
+				C6623933183DF1EA0047CA50 /* 4.plist in Resources */,
+				C6623909183DEB160047CA50 /* InfoPlist.strings in Resources */,
+				C6623951183E09300047CA50 /* 11.png in Resources */,
+				C6623936183DF1F00047CA50 /* 5.plist in Resources */,
+				C662393C183DF1FE0047CA50 /* 7.plist in Resources */,
+				C6623967183E09300047CA50 /* 71.png in Resources */,
+				C6623961183E09300047CA50 /* 51.png in Resources */,
+				C662395F183E09300047CA50 /* 42.png in Resources */,
+				C6623955183E09300047CA50 /* 21.png in Resources */,
+				C662396A183E09CE0047CA50 /* testtext.plist in Resources */,
+				C6623953183E09300047CA50 /* 12.png in Resources */,
+				C662392D183DF1A70047CA50 /* 2.plist in Resources */,
+				C662395D183E09300047CA50 /* 41.png in Resources */,
+				C6623939183DF1F70047CA50 /* 6.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C66238D8183DEB150047CA50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C62C9042183F2B6F00994EBC /* ScreenFactory.m in Sources */,
+				C662391A183DF0940047CA50 /* SaveFile.m in Sources */,
+				C6623972183E30A40047CA50 /* LiteGALTabBarViewController.m in Sources */,
+				C6623980183E49030047CA50 /* GameImageView.m in Sources */,
+				C6623978183E346A0047CA50 /* GameViewController.m in Sources */,
+				C662391E183DF0950047CA50 /* Character.m in Sources */,
+				C62C903E183F240500994EBC /* LiteGALScreen.m in Sources */,
+				C6623916183DEC230047CA50 /* LiteGAL.xcdatamodeld in Sources */,
+				C66238EE183DEB160047CA50 /* main.m in Sources */,
+				C66238F2183DEB160047CA50 /* LiteGALAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66238F8183DEB160047CA50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6623979183E346A0047CA50 /* GameViewController.m in Sources */,
+				C6623917183DEC230047CA50 /* LiteGAL.xcdatamodeld in Sources */,
+				C62C9043183F2B6F00994EBC /* ScreenFactory.m in Sources */,
+				C62C903F183F240500994EBC /* LiteGALScreen.m in Sources */,
+				C662390B183DEB160047CA50 /* LiteGALTests.m in Sources */,
+				C662391B183DF0940047CA50 /* SaveFile.m in Sources */,
+				C662391F183DF0950047CA50 /* Character.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6623903183DEB160047CA50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C66238DB183DEB150047CA50 /* LiteGAL */;
+			targetProxy = C6623902183DEB160047CA50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C66238EA183DEB160047CA50 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C66238EB183DEB160047CA50 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C6623907183DEB160047CA50 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6623908183DEB160047CA50 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C662390C183DEB160047CA50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C662390D183DEB160047CA50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C662390F183DEB160047CA50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiteGAL/LiteGAL-Prefix.pch";
+				INFOPLIST_FILE = "LiteGAL/LiteGAL-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C6623910183DEB160047CA50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiteGAL/LiteGAL-Prefix.pch";
+				INFOPLIST_FILE = "LiteGAL/LiteGAL-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C6623912183DEB160047CA50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LiteGAL.app/LiteGAL";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiteGAL/LiteGAL-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LiteGALTests/LiteGALTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C6623913183DEB160047CA50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LiteGAL.app/LiteGAL";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiteGAL/LiteGAL-Prefix.pch";
+				INFOPLIST_FILE = "LiteGALTests/LiteGALTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C66238D7183DEB150047CA50 /* Build configuration list for PBXProject "LiteGAL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C662390C183DEB160047CA50 /* Debug */,
+				C662390D183DEB160047CA50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C662390E183DEB160047CA50 /* Build configuration list for PBXNativeTarget "LiteGAL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C662390F183DEB160047CA50 /* Debug */,
+				C6623910183DEB160047CA50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6623911183DEB160047CA50 /* Build configuration list for PBXNativeTarget "LiteGALTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6623912183DEB160047CA50 /* Debug */,
+				C6623913183DEB160047CA50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C6623914183DEC230047CA50 /* LiteGAL.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C6623915183DEC230047CA50 /* LiteGAL.xcdatamodel */,
+			);
+			currentVersion = C6623915183DEC230047CA50 /* LiteGAL.xcdatamodel */;
+			name = LiteGAL.xcdatamodeld;
+			path = ../LiteGAL.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C66238D4183DEB150047CA50 /* Project object */;
+}
