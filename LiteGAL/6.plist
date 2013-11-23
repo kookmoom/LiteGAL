@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Branch</key>
+	<false/>
+	<key>NextBranch</key>
+	<integer>0</integer>
+	<key>PreOptions</key>
+	<string></string>
+	<key>Screens</key>
+	<array>
+		<dict>
+			<key>Picture</key>
+			<string>61</string>
+			<key>Music</key>
+			<string>testmusic</string>
+			<key>Text</key>
+			<string>61</string>
+		</dict>
+	</array>
+</dict>
+</plist>
