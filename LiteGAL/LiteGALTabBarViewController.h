@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @interface LiteGALTabBarViewController : UITabBarController
+
+@property (strong, nonatomic) UIPopoverController* popController;
 
 @end

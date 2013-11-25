@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "LiteGALScreen.h"
+#import "BranchOptionsTableViewController.h"
+
+
+#define INIT_SCREEN_ROW 0;
 
 @protocol ScreenDataSourceDelegate <NSObject>
 
@@ -20,6 +24,11 @@
 
 @interface GameViewController : UIViewController
 
-@property (weak, nonatomic) id <ScreenDataSourceDelegate> delegate;
+@property (weak, nonatomic) id <ScreenDataSourceDelegate> screenFactoryDelegate;
+
+
+- (void) updateBySaveData:(NSString *)name atScreenIndex:(NSInteger)screen andTextIndex:(NSInteger)text;
+
+
 
 @end

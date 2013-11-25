@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Character" representedClassName="Character" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -8,11 +8,12 @@
     <entity name="SaveFile" representedClassName="SaveFile" syncable="YES">
         <attribute name="branch" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="saveTime" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="screen" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="screen" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="textRow" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="characters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Character" inverseName="saveFile" inverseEntity="Character" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SaveFile" positionX="171" positionY="230" width="128" height="103"/>
-        <element name="Character" positionX="423" positionY="245" width="128" height="88"/>
+        <element name="Character" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SaveFile" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

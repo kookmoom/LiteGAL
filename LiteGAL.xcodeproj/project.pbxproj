@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C615149F18420CF1004F8389 /* BranchOptionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C615149E18420CF1004F8389 /* BranchOptionsTableViewController.m */; };
+		C61514A018420CF1004F8389 /* BranchOptionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C615149E18420CF1004F8389 /* BranchOptionsTableViewController.m */; };
+		C62ADC91184143EC005ADA7C /* BranchController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62ADC90184143EC005ADA7C /* BranchController.m */; };
+		C62ADC92184143EC005ADA7C /* BranchController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62ADC90184143EC005ADA7C /* BranchController.m */; };
+		C62ADC9518415985005ADA7C /* LiteGALBranch.m in Sources */ = {isa = PBXBuildFile; fileRef = C62ADC9418415985005ADA7C /* LiteGALBranch.m */; };
+		C62ADC9618415985005ADA7C /* LiteGALBranch.m in Sources */ = {isa = PBXBuildFile; fileRef = C62ADC9418415985005ADA7C /* LiteGALBranch.m */; };
+		C62ADCA118416049005ADA7C /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = C62ADCA018416049005ADA7C /* Character.m */; };
+		C62ADCA218416049005ADA7C /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = C62ADCA018416049005ADA7C /* Character.m */; };
+		C62ADCA518416049005ADA7C /* SaveFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C62ADCA418416049005ADA7C /* SaveFile.m */; };
+		C62ADCA618416049005ADA7C /* SaveFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C62ADCA418416049005ADA7C /* SaveFile.m */; };
 		C62C903E183F240500994EBC /* LiteGALScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = C62C903D183F240500994EBC /* LiteGALScreen.m */; };
 		C62C903F183F240500994EBC /* LiteGALScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = C62C903D183F240500994EBC /* LiteGALScreen.m */; };
 		C62C9042183F2B6F00994EBC /* ScreenFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C62C9041183F2B6F00994EBC /* ScreenFactory.m */; };
@@ -27,10 +37,6 @@
 		C662390B183DEB160047CA50 /* LiteGALTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C662390A183DEB160047CA50 /* LiteGALTests.m */; };
 		C6623916183DEC230047CA50 /* LiteGAL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6623914183DEC230047CA50 /* LiteGAL.xcdatamodeld */; };
 		C6623917183DEC230047CA50 /* LiteGAL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6623914183DEC230047CA50 /* LiteGAL.xcdatamodeld */; };
-		C662391A183DF0940047CA50 /* SaveFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C6623919183DF0940047CA50 /* SaveFile.m */; };
-		C662391B183DF0940047CA50 /* SaveFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C6623919183DF0940047CA50 /* SaveFile.m */; };
-		C662391E183DF0950047CA50 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = C662391D183DF0950047CA50 /* Character.m */; };
-		C662391F183DF0950047CA50 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = C662391D183DF0950047CA50 /* Character.m */; };
 		C6623921183DF0E20047CA50 /* 0.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623920183DF0E20047CA50 /* 0.plist */; };
 		C6623922183DF0E20047CA50 /* 0.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623920183DF0E20047CA50 /* 0.plist */; };
 		C6623929183DF19C0047CA50 /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623928183DF19C0047CA50 /* 1.plist */; };
@@ -74,11 +80,11 @@
 		C6623969183E09CE0047CA50 /* testtext.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623968183E09CE0047CA50 /* testtext.plist */; };
 		C662396A183E09CE0047CA50 /* testtext.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6623968183E09CE0047CA50 /* testtext.plist */; };
 		C6623972183E30A40047CA50 /* LiteGALTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6623971183E30A40047CA50 /* LiteGALTabBarViewController.m */; };
-		C6623974183E31750047CA50 /* iPhone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6623973183E31740047CA50 /* iPhone5.storyboard */; };
-		C6623975183E31750047CA50 /* iPhone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6623973183E31740047CA50 /* iPhone5.storyboard */; };
 		C6623978183E346A0047CA50 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6623977183E346A0047CA50 /* GameViewController.m */; };
 		C6623979183E346A0047CA50 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6623977183E346A0047CA50 /* GameViewController.m */; };
 		C6623980183E49030047CA50 /* GameImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C662397F183E49030047CA50 /* GameImageView.m */; };
+		C6E51BA31843618D00D68E82 /* Storyboard111.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E51BA21843618D00D68E82 /* Storyboard111.storyboard */; };
+		C6E51BA61843622600D68E82 /* GameNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E51BA51843622600D68E82 /* GameNavigationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +98,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C615149D18420CF1004F8389 /* BranchOptionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BranchOptionsTableViewController.h; sourceTree = "<group>"; };
+		C615149E18420CF1004F8389 /* BranchOptionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BranchOptionsTableViewController.m; sourceTree = "<group>"; };
+		C62ADC8F184143EC005ADA7C /* BranchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BranchController.h; sourceTree = "<group>"; };
+		C62ADC90184143EC005ADA7C /* BranchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BranchController.m; sourceTree = "<group>"; };
+		C62ADC9318415985005ADA7C /* LiteGALBranch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiteGALBranch.h; sourceTree = "<group>"; };
+		C62ADC9418415985005ADA7C /* LiteGALBranch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiteGALBranch.m; sourceTree = "<group>"; };
+		C62ADC9F18416049005ADA7C /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		C62ADCA018416049005ADA7C /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
+		C62ADCA318416049005ADA7C /* SaveFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveFile.h; sourceTree = "<group>"; };
+		C62ADCA418416049005ADA7C /* SaveFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveFile.m; sourceTree = "<group>"; };
 		C62C903C183F240500994EBC /* LiteGALScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiteGALScreen.h; sourceTree = "<group>"; };
 		C62C903D183F240500994EBC /* LiteGALScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiteGALScreen.m; sourceTree = "<group>"; };
 		C62C9040183F2B6F00994EBC /* ScreenFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenFactory.h; sourceTree = "<group>"; };
@@ -114,10 +130,6 @@
 		C6623908183DEB160047CA50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C662390A183DEB160047CA50 /* LiteGALTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiteGALTests.m; sourceTree = "<group>"; };
 		C6623915183DEC230047CA50 /* LiteGAL.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LiteGAL.xcdatamodel; sourceTree = "<group>"; };
-		C6623918183DF0940047CA50 /* SaveFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveFile.h; sourceTree = "<group>"; };
-		C6623919183DF0940047CA50 /* SaveFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveFile.m; sourceTree = "<group>"; };
-		C662391C183DF0950047CA50 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
-		C662391D183DF0950047CA50 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		C6623920183DF0E20047CA50 /* 0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 0.plist; sourceTree = "<group>"; };
 		C6623928183DF19C0047CA50 /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
 		C662392B183DF1A70047CA50 /* 2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 2.plist; sourceTree = "<group>"; };
@@ -141,11 +153,13 @@
 		C6623968183E09CE0047CA50 /* testtext.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = testtext.plist; sourceTree = "<group>"; };
 		C6623970183E30A40047CA50 /* LiteGALTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiteGALTabBarViewController.h; sourceTree = "<group>"; };
 		C6623971183E30A40047CA50 /* LiteGALTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiteGALTabBarViewController.m; sourceTree = "<group>"; };
-		C6623973183E31740047CA50 /* iPhone5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone5.storyboard; path = ../iPhone5.storyboard; sourceTree = "<group>"; };
 		C6623976183E346A0047CA50 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		C6623977183E346A0047CA50 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		C662397E183E49030047CA50 /* GameImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameImageView.h; sourceTree = "<group>"; };
 		C662397F183E49030047CA50 /* GameImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameImageView.m; sourceTree = "<group>"; };
+		C6E51BA21843618D00D68E82 /* Storyboard111.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard111.storyboard; sourceTree = "<group>"; };
+		C6E51BA41843622600D68E82 /* GameNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameNavigationViewController.h; sourceTree = "<group>"; };
+		C6E51BA51843622600D68E82 /* GameNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameNavigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +191,7 @@
 		C66238D3183DEB150047CA50 = {
 			isa = PBXGroup;
 			children = (
+				C6E51BA21843618D00D68E82 /* Storyboard111.storyboard */,
 				C66238E7183DEB160047CA50 /* LiteGAL */,
 				C6623904183DEB160047CA50 /* LiteGALTests */,
 				C66238DE183DEB150047CA50 /* Frameworks */,
@@ -215,7 +230,6 @@
 				C6941D61183FA2AC004F8BD9 /* ViewController */,
 				C66238F0183DEB160047CA50 /* LiteGALAppDelegate.h */,
 				C66238F1183DEB160047CA50 /* LiteGALAppDelegate.m */,
-				C6623973183E31740047CA50 /* iPhone5.storyboard */,
 				C6623914183DEC230047CA50 /* LiteGAL.xcdatamodeld */,
 				C66238F6183DEB160047CA50 /* Images.xcassets */,
 				C66238E8183DEB160047CA50 /* Supporting Files */,
@@ -324,6 +338,10 @@
 		C6941D61183FA2AC004F8BD9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C6E51BA41843622600D68E82 /* GameNavigationViewController.h */,
+				C6E51BA51843622600D68E82 /* GameNavigationViewController.m */,
+				C615149D18420CF1004F8389 /* BranchOptionsTableViewController.h */,
+				C615149E18420CF1004F8389 /* BranchOptionsTableViewController.m */,
 				C6623976183E346A0047CA50 /* GameViewController.h */,
 				C6623977183E346A0047CA50 /* GameViewController.m */,
 				C6623970183E30A40047CA50 /* LiteGALTabBarViewController.h */,
@@ -335,6 +353,8 @@
 		C6941D62183FA2C7004F8BD9 /* LiteGALControler */ = {
 			isa = PBXGroup;
 			children = (
+				C62ADC8F184143EC005ADA7C /* BranchController.h */,
+				C62ADC90184143EC005ADA7C /* BranchController.m */,
 				C62C9040183F2B6F00994EBC /* ScreenFactory.h */,
 				C62C9041183F2B6F00994EBC /* ScreenFactory.m */,
 			);
@@ -353,10 +373,10 @@
 		C6941D64183FA2F0004F8BD9 /* CoreDataModel */ = {
 			isa = PBXGroup;
 			children = (
-				C662391C183DF0950047CA50 /* Character.h */,
-				C662391D183DF0950047CA50 /* Character.m */,
-				C6623918183DF0940047CA50 /* SaveFile.h */,
-				C6623919183DF0940047CA50 /* SaveFile.m */,
+				C62ADCA318416049005ADA7C /* SaveFile.h */,
+				C62ADCA418416049005ADA7C /* SaveFile.m */,
+				C62ADC9F18416049005ADA7C /* Character.h */,
+				C62ADCA018416049005ADA7C /* Character.m */,
 			);
 			name = CoreDataModel;
 			sourceTree = "<group>";
@@ -364,6 +384,8 @@
 		C6941D65183FA324004F8BD9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C62ADC9318415985005ADA7C /* LiteGALBranch.h */,
+				C62ADC9418415985005ADA7C /* LiteGALBranch.m */,
 				C62C903C183F240500994EBC /* LiteGALScreen.h */,
 				C62C903D183F240500994EBC /* LiteGALScreen.m */,
 			);
@@ -451,7 +473,7 @@
 				C6623958183E09300047CA50 /* 31.png in Resources */,
 				C6623954183E09300047CA50 /* 21.png in Resources */,
 				C6623956183E09300047CA50 /* 22.png in Resources */,
-				C6623974183E31750047CA50 /* iPhone5.storyboard in Resources */,
+				C6E51BA31843618D00D68E82 /* Storyboard111.storyboard in Resources */,
 				C6623966183E09300047CA50 /* 71.png in Resources */,
 				C6623952183E09300047CA50 /* 12.png in Resources */,
 				C6623950183E09300047CA50 /* 11.png in Resources */,
@@ -482,7 +504,6 @@
 				C6623957183E09300047CA50 /* 22.png in Resources */,
 				C662392A183DF19C0047CA50 /* 1.plist in Resources */,
 				C6623922183DF0E20047CA50 /* 0.plist in Resources */,
-				C6623975183E31750047CA50 /* iPhone5.storyboard in Resources */,
 				C6623959183E09300047CA50 /* 31.png in Resources */,
 				C6623930183DF1E40047CA50 /* 3.plist in Resources */,
 				C662395B183E09300047CA50 /* 32.png in Resources */,
@@ -511,15 +532,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C62C9042183F2B6F00994EBC /* ScreenFactory.m in Sources */,
-				C662391A183DF0940047CA50 /* SaveFile.m in Sources */,
+				C62ADC9518415985005ADA7C /* LiteGALBranch.m in Sources */,
+				C62ADC91184143EC005ADA7C /* BranchController.m in Sources */,
 				C6623972183E30A40047CA50 /* LiteGALTabBarViewController.m in Sources */,
+				C6E51BA61843622600D68E82 /* GameNavigationViewController.m in Sources */,
 				C6623980183E49030047CA50 /* GameImageView.m in Sources */,
 				C6623978183E346A0047CA50 /* GameViewController.m in Sources */,
-				C662391E183DF0950047CA50 /* Character.m in Sources */,
 				C62C903E183F240500994EBC /* LiteGALScreen.m in Sources */,
 				C6623916183DEC230047CA50 /* LiteGAL.xcdatamodeld in Sources */,
+				C62ADCA518416049005ADA7C /* SaveFile.m in Sources */,
 				C66238EE183DEB160047CA50 /* main.m in Sources */,
+				C615149F18420CF1004F8389 /* BranchOptionsTableViewController.m in Sources */,
 				C66238F2183DEB160047CA50 /* LiteGALAppDelegate.m in Sources */,
+				C62ADCA118416049005ADA7C /* Character.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,11 +554,14 @@
 			files = (
 				C6623979183E346A0047CA50 /* GameViewController.m in Sources */,
 				C6623917183DEC230047CA50 /* LiteGAL.xcdatamodeld in Sources */,
+				C62ADCA618416049005ADA7C /* SaveFile.m in Sources */,
 				C62C9043183F2B6F00994EBC /* ScreenFactory.m in Sources */,
 				C62C903F183F240500994EBC /* LiteGALScreen.m in Sources */,
 				C662390B183DEB160047CA50 /* LiteGALTests.m in Sources */,
-				C662391B183DF0940047CA50 /* SaveFile.m in Sources */,
-				C662391F183DF0950047CA50 /* Character.m in Sources */,
+				C62ADC9618415985005ADA7C /* LiteGALBranch.m in Sources */,
+				C62ADC92184143EC005ADA7C /* BranchController.m in Sources */,
+				C62ADCA218416049005ADA7C /* Character.m in Sources */,
+				C61514A018420CF1004F8389 /* BranchOptionsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

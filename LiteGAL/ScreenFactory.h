@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "GameViewController.h"
-@interface ScreenFactory : NSObject <ScreenDataSourceDelegate>
+
+@interface ScreenFactory : NSObject <ScreenDataSourceDelegate >
+
 - (id)initWithScreens:(NSArray *)screens;
+
+- (id)initWithScreens:(NSArray *)screens AtIndex:(NSInteger)row;
 
 @end

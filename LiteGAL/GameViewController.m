@@ -8,6 +8,9 @@
 
 #import "GameViewController.h"
 #import "GameImageView.h"
+#import "BranchController.h"
+
+#define INIT_SCREEN_ROW 0;
 
 @interface GameViewController ()
 
@@ -15,11 +18,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *GameTextDisplay;
 
 @property (weak, nonatomic) IBOutlet GameImageView *imageView;
+- (IBAction)saveData:(id)sender;
+
+
+#pragma mark - action Methods
+
 
 #pragma mark - Self strong property pointer
 @property (strong, nonatomic) UIImage *screenLayer;
 
 @property (strong, nonatomic) NSArray *screenText;
+
+@property (strong, nonatomic) BranchController *myBranchController;
+
 
 #pragma mark - Self weak property pointer
 
@@ -32,15 +43,37 @@
 
 @implementation GameViewController
 
+- (BranchController*) myBranchController
+{
+    if (_myBranchController == nil)
+    _myBranchController = [[BranchController alloc]initWithBranchName:@"1"];
+    
+    return _myBranchController;
+}
+
+
 #pragma mark - init Methods
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
+       
     }
     return self;
+}
+
+#pragma mark - update View Methods
+
+- (void)updateTextAtIndex:(NSInteger)row
+{
+    self.GameTextDisplay.text = [self.screen.textArray objectAtIndex:row];
+}
+
+- (void)updatePicture
+{
+    [self.imageView setImage:[[UIImage alloc]initWithData:self.screen.picture]];
 }
 
 #pragma mark - Gesture Methods
@@ -53,7 +86,8 @@
         [self getScreenFromFactory];
     }
     else{
-        self.GameTextDisplay.text = [self.screen.textArray objectAtIndex:self.textRow];
+        
+        [self updateTextAtIndex:self.textRow];
     }
    
 }
@@ -98,20 +132,27 @@
 - (void) getScreenFromFactory
 {
 //    [self testScreen];
-    self.screen = [self.delegate getScreenFromDelegate];
+    self.screen = [self.screenFactoryDelegate  getScreenFromDelegate];
+}
+
+
+- (void) updateScreenAtTextIndex:(NSInteger)row
+{
+    [self updatePicture];
     
-    [self updateFirstScreen];
+    [self updateTextAtIndex:row];
     
+    self.textRow = row;
+}
+
+- (void) updateScreenByBranchAtTextIndex:(NSInteger)row
+{
+    [self getScreenFromFactory];
+    
+    [self updateScreenAtTextIndex:row];
     
 }
 
-- (void) updateFirstScreen
-{
-    [self.imageView setImage:[[UIImage alloc]initWithData:self.screen.picture]];
-    self.GameTextDisplay.text = [self.screen.textArray objectAtIndex:0];
-    
-    self.textRow = 0;
-}
 
 #pragma mark - ios View Methods
 
@@ -120,11 +161,18 @@
     [super viewDidLoad];
     
     //load screen
-    //set gameview
+    if (self.screenFactoryDelegate == nil) {
+        self.screenFactoryDelegate = [self.myBranchController getCurrentScreenFactory];
+    }
+   
     [self getScreenFromFactory];
     
 	//gesture
     [self gestureRecognizerSetup];
+    
+    //set gameview
+    NSInteger row = INIT_SCREEN_ROW;
+    [self updateScreenAtTextIndex:row];
     
 }
 
@@ -134,7 +182,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Segue Methods
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"OptionSegue"]) {
+        
+        BranchOptionsTableViewController* temp = segue.destinationViewController;
+        
+        temp.branchDelegate = self.myBranchController;
+    }
+}
 
 
 
+- (IBAction)saveData:(id)sender {
+    
+    [self performSegueWithIdentifier:@"OptionSegue" sender:sender];
+}
 @end

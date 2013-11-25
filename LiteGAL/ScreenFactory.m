@@ -10,7 +10,7 @@
 
 @interface ScreenFactory () <ScreenDataSourceDelegate>
 
-@property (weak, nonatomic) GameViewController *gameViewController;
+//@property (weak, nonatomic) GameViewController *gameViewController;
 
 @property (strong, nonatomic) NSArray *screens;
 
@@ -33,10 +33,25 @@
             self.screens = screens;
             self.row = 0;
             [self loadFirstScreen];
+            
         }
     
             return self;
     
+}
+
+- (id) initWithScreens:(NSArray *)screens AtIndex:(NSInteger)row
+{
+    self = [super init];
+    if (self)
+    {
+        self.screens = screens;
+        self.row = row;
+        [self loadScreenAtIndex:row];
+        
+    }
+    
+    return self;
 }
 
 #pragma mark - Load screen Automatically
@@ -137,6 +152,16 @@
 {
     if (self.delayScreen == nil)
         self.delayScreen = [self loadingScreenByCurrentWayAtIndex:self.row];
+    
+    self.row++;
+    
+    return self.delayScreen;
+}
+
+- (LiteGALScreen*) loadScreenAtIndex:(NSInteger)row
+{
+    
+    self.delayScreen = [self loadingScreenByCurrentWayAtIndex:self.row];
     
     self.row++;
     
