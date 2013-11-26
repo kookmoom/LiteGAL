@@ -54,9 +54,7 @@
 
 - (void)testingBranch
 {
-    UINavigationController* testController = [self.viewControllers objectAtIndex:0];
-    
-    GameViewController  *gameview= [testController.viewControllers objectAtIndex:0];
+    //UINavigationController* testController = [self.viewControllers objectAtIndex:0];
 
     BranchController *testingBranchController = [[BranchController alloc]initWithBranchName:@"1"];
     
@@ -67,6 +65,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     
 //	[self testScreenFactoryAtTabBarController];
 //    [self testingBranch];

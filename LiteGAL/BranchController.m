@@ -19,7 +19,7 @@
 @property (strong, nonatomic) LiteGALBranch* currentBranch;
 @property (strong, nonatomic) NSArray* preOptions;
 @property (strong, nonatomic) NSArray* preScreenFactories;
-//@property (strong, nonatomic) GameViewController *myGameViewController;
+@property (strong, nonatomic) NSArray* preBranchController;
 
 @property NSInteger valueOfA;
 @property NSInteger valueOfB;
@@ -35,7 +35,7 @@
 {
     LiteGALBranch* liteBranch = [[LiteGALBranch alloc]init];
     
-    NSURL *plistURL = [[NSBundle mainBundle] URLForResource:@"1" withExtension:@"plist"];
+    NSURL *plistURL = [[NSBundle mainBundle] URLForResource:name withExtension:@"plist"];
     NSDictionary *branch = [NSDictionary dictionaryWithContentsOfURL:plistURL];
     
     liteBranch.branch = [branch valueForKey:@"Branch"];
@@ -62,66 +62,29 @@
                     name = @"0";
                 }
                     _currentBranch = [self loadBranchAtResource:name];
-            
-            
-                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                         
-                        [self prepareOptions];
-                    
-                    });
-            
+                    [self prepareOptions];
             
                     _currentScreenFactory = [self setupFirstScreenFactory:_currentBranch.screens];
-            
-                //    _myGameViewController.screenFactoryDelegate = _currentScreenFactory;
         }
     
     return self;
 }
 
-/*
-- (id) initWithController:(GameViewController*)gameViewController branchName:(NSString*)name
-{
-    self = [super init];
-    if  (self)
-    {
-        _valueOfA = 0;
-        _valueOfB = 0;
-        
-        _myGameViewController = gameViewController;
-        
-        if (name == nil)
-        {
-            name = @"0";
-        }
-        _currentBranch = [self loadBranchAtResource:name];
-        
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            
-            [self prepareOptions];
-            
-        });
-        
-        
-        _currentScreenFactory = [self setupFirstScreenFactory:_currentBranch.screens];
-        
-            _myGameViewController.screenFactoryDelegate = _currentScreenFactory;
-    }
-    
-    return self;
-}
- */
 
 #pragma mark - update Self Branch
 
-- (void) updateBranchAtChoose:(NSInteger)chooseRow
+- (void) updateSelfBranchAtChoose:(NSInteger)chooseRow
 {
     NSInteger choosedOption = [[[self.preOptions objectAtIndex:chooseRow]valueForKey:@"row"]intValue];
     
     NSDictionary *choosedOptionDic = [self.currentBranch.preOptions objectAtIndex:choosedOption];
     
     self.currentBranch = [self loadBranchAtResource:[choosedOptionDic valueForKey:@"NextBranch"]];
+    
+    if (!self.currentBranch.branch) {
+        return;
+    }
     
     [self prepareOptions];
 }
@@ -130,14 +93,14 @@
 
 - (void) upadateGameViewControllerTextAtIndex:(NSInteger)row
 {
-//    [self.myGameViewController updateScreenByBranchAtTextIndex:row];
+    //There is not ready for now
 }
 
 - (void) updateGameViewControllerWithScreenFactory:(ScreenFactory*)screenFactory atTextIndex:(NSInteger)row
 {
+    //CurrentScreenFactory will be deleted
     self.currentScreenFactory = screenFactory;
-//    self.myGameViewController.screenFactoryDelegate = self.currentScreenFactory;
-//    self.myGameViewController.chooseTabelViewController = self.myPopoverTableViewContoller;
+
     [self upadateGameViewControllerTextAtIndex:row];
 }
 
@@ -167,12 +130,14 @@
     return screenFactory;
 }
 
+
 #pragma mark - prepare Options
 
 - (BOOL) isMatchTheConditionAtDict:(NSDictionary *)character
 {
     NSString *conditon = [character valueForKey:@"Condition"];
     NSInteger score = [[character valueForKey:@"Score"] intValue];
+    
     if ([conditon isEqualToString:@"="]) {
         
         
@@ -211,32 +176,49 @@
     return NO;
 }
 
+- (ScreenFactory*) prepareScreenFactoryAtBranch:(NSDictionary*)branchDict
+{
+    NSString *name = [branchDict valueForKey:@"NextBranch"];
+    LiteGALBranch* branch = [self loadBranchAtResource:name];
+    
+    return [self setupFirstScreenFactory:branch.screens];
+}
+
 - (void)prepareOptions
 {
-    NSMutableArray *preOptions = [[NSMutableArray alloc]init];
-    NSMutableArray *preScreenFactories = [[NSMutableArray alloc]init];
-    NSDictionary *tempDict;
-    NSDictionary *branchDict;
-    
-    
-    for (int row = 0; row < [self.currentBranch.preOptions count]; row++) {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        branchDict = [self.currentBranch.preOptions objectAtIndex:row];
-
-        if ([self isRightOption:branchDict])
-        {
+        NSMutableArray *preOptions = [[NSMutableArray alloc]init];
+        NSMutableArray *preScreenFactories = [[NSMutableArray alloc]init];
+        
+        
+        NSDictionary *tempDict;
+        NSDictionary *branchDict;
+        
+        
+        for (int row = 0; row < [self.currentBranch.preOptions count]; row++) {
             
-            tempDict = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%d",row],@"row",
-                        [branchDict valueForKey:@"OptionText"],@"OptionText",nil];
+            branchDict = [self.currentBranch.preOptions objectAtIndex:row];
             
-            [preOptions addObject:tempDict];
-            [preScreenFactories addObject:[self setupFirstScreenFactory:[branchDict valueForKey:@"Screens"]]];
-            
+            if ([self isRightOption:branchDict])
+            {
+                
+                tempDict = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%d",row],@"row",
+                            [branchDict valueForKey:@"OptionText"],@"OptionText",nil];
+                
+                [preOptions addObject:tempDict];
+                
+                [preScreenFactories addObject:[self prepareScreenFactoryAtBranch:branchDict]];
+                
+            }
         }
-    }
-    
-    self.preOptions = preOptions;
-    self.preScreenFactories = preScreenFactories;
+        
+        self.preOptions = preOptions;
+        self.preScreenFactories = preScreenFactories;
+     
+        
+        
+    });
     
 }
 
@@ -249,14 +231,17 @@
 
 - (void)updateGameViewAtBranch:(NSInteger)row
 {
-    __block NSInteger chooseRow = row;
+    NSInteger chooseRow = row;
     [self updateGameViewControllerByChoose:row];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        [self updateGameViewAtBranch:chooseRow];
+        [self updateSelfBranchAtChoose:chooseRow];
         
     });
+    
+        
+
 }
 
 #pragma mark - out Methdos;

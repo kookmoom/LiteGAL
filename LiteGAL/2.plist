@@ -18,14 +18,6 @@
 			<key>Text</key>
 			<string>21</string>
 		</dict>
-		<dict>
-			<key>Picture</key>
-			<string>22</string>
-			<key>Music</key>
-			<string>testmusic</string>
-			<key>Text</key>
-			<string>22</string>
-		</dict>
 	</array>
 </dict>
 </plist>

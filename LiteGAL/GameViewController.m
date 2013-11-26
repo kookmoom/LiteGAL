@@ -54,15 +54,7 @@
 
 #pragma mark - init Methods
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        
-       
-    }
-    return self;
-}
+
 
 #pragma mark - update View Methods
 
@@ -84,6 +76,7 @@
     
     if (self.textRow >= [self.screen.textArray count]) {
         [self getScreenFromFactory];
+        self.textRow = INIT_SCREEN_ROW;
     }
     else{
         
@@ -133,13 +126,20 @@
 {
 //    [self testScreen];
     self.screen = [self.screenFactoryDelegate  getScreenFromDelegate];
+    self.textRow = INIT_SCREEN_ROW;
+    
+    [self updatePicture];
+    [self updateTextAtIndex:self.textRow];
+    
+    if (self.screen == nil) {
+        
+        [self performSegueWithIdentifier:@"OptionSegue" sender:nil];
+    }
 }
 
 
 - (void) updateScreenAtTextIndex:(NSInteger)row
 {
-    [self updatePicture];
-    
     [self updateTextAtIndex:row];
     
     self.textRow = row;
@@ -159,23 +159,36 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     //load screen
     if (self.screenFactoryDelegate == nil) {
         self.screenFactoryDelegate = [self.myBranchController getCurrentScreenFactory];
+        [self gestureRecognizerSetup];
     }
    
-    [self getScreenFromFactory];
     
-	//gesture
-    [self gestureRecognizerSetup];
     
-    //set gameview
-    NSInteger row = INIT_SCREEN_ROW;
-    [self updateScreenAtTextIndex:row];
     
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.screenFactoryDelegate = [self.myBranchController getCurrentScreenFactory];
+        
+    [self getScreenFromFactory];
+        
+        
+    NSInteger row = INIT_SCREEN_ROW;
+    [self updateScreenAtTextIndex:row];
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -191,10 +204,12 @@
         BranchOptionsTableViewController* temp = segue.destinationViewController;
         
         temp.branchDelegate = self.myBranchController;
+        
+        [self.navigationController setHidesBottomBarWhenPushed:YES];
     }
 }
 
-
+#pragma mark - action Methods
 
 - (IBAction)saveData:(id)sender {
     

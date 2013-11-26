@@ -20,12 +20,7 @@
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-
-    
-    
     self = [super initWithStyle:style];
-    
-    
     
     return self;
 }
@@ -33,18 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-        self.preOptions = [self.branchDelegate getOptionsFormBranchController];
-        
-    
-
-    
+    self.preOptions = [self.branchDelegate getOptionsFormBranchController];
+    [self.navigationItem setHidesBackButton:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,16 +55,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"ChooseCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    // Configure the cell...
     NSDictionary *optionDict =[self.preOptions objectAtIndex:indexPath.row];
     cell.textLabel.text = [optionDict valueForKey:@"OptionText"];
-    // Configure the cell...
     
     return cell;
 }
@@ -87,7 +71,6 @@
 {
     [self.branchDelegate updateGameViewAtBranch:indexPath.row];
     [self.navigationController popViewControllerAnimated:YES];
-    
 }
 
 /*
