@@ -2,10 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BranchName</key>
+	<string>3</string>
 	<key>Branch</key>
 	<false/>
 	<key>NextBranch</key>
-	<integer>4</integer>
+	<string>4</string>
 	<key>PreOptions</key>
 	<array/>
 	<key>Screens</key>

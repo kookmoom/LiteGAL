@@ -2,15 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BranchName</key>
+	<string>4</string>
 	<key>Branch</key>
 	<true/>
 	<key>NextBranch</key>
-	<integer>0</integer>
+	<string>0</string>
 	<key>PreOptions</key>
 	<array>
 		<dict>
 			<key>NextBranch</key>
-			<integer>5</integer>
+			<string>5</string>
 			<key>OptionText</key>
 			<string>5</string>
 			<key>A</key>
@@ -34,7 +36,7 @@
 		</dict>
 		<dict>
 			<key>NextBranch</key>
-			<integer>6</integer>
+			<string>6</string>
 			<key>OptionText</key>
 			<string>6</string>
 			<key>A</key>
@@ -58,7 +60,7 @@
 		</dict>
 		<dict>
 			<key>NextBranch</key>
-			<integer>7</integer>
+			<string>7</string>
 			<key>OptionText</key>
 			<string>7</string>
 			<key>A</key>

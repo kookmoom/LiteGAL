@@ -5,7 +5,7 @@
 	<key>Branch</key>
 	<false/>
 	<key>NextBranch</key>
-	<integer>0</integer>
+	<string>0</string>
 	<key>PreOptions</key>
 	<array/>
 	<key>Screens</key>

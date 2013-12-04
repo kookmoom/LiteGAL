@@ -140,15 +140,26 @@
 {
 //    [self testScreen];
     self.screen = [self.screenFactoryDelegate  getScreenFromDelegate];
+    
     self.textRow = INIT_SCREEN_ROW;
     
     [self updatePicture];
     [self updateTextAtIndex:self.textRow];
     
-    if (self.screen == nil) {
+    if (self.screen == nil ) {
         
-        [self performSegueWithIdentifier:@"OptionSegue" sender:nil];
+        if ([self.myBranchController isBranch])
+        {
+            [self performSegueWithIdentifier:@"OptionSegue" sender:nil];
+        }
+        else
+        {
+            [self.myBranchController branchIsUpdatedByGameViewController];
+            [self branchDidChange];
+        }
     }
+    
+    
 }
 
 

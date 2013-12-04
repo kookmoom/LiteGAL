@@ -17,6 +17,9 @@
 - (id)initWithBranchName:(NSString*)name;
 - (void) updateGameViewControllerBySaveData:(NSString *)name atScreenIndex:(NSInteger)screen andTextIndex:(NSInteger)text;
 
+- (BOOL) isBranch;
+- (void) branchIsUpdatedByGameViewController;
+
 - (ScreenFactory*) getCurrentScreenFactory;
 
 - (NSString*) getCurrentBranchName;
