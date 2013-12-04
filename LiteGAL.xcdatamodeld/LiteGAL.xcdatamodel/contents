@@ -6,8 +6,8 @@
         <relationship name="saveFile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SaveFile" inverseName="characters" inverseEntity="SaveFile" syncable="YES"/>
     </entity>
     <entity name="SaveFile" representedClassName="SaveFile" syncable="YES">
-        <attribute name="branch" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="saveTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="branch" attributeType="String" syncable="YES"/>
+        <attribute name="saveTime" attributeType="Date" indexed="YES" syncable="YES"/>
         <attribute name="screen" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="textRow" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="characters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Character" inverseName="saveFile" inverseEntity="Character" syncable="YES"/>

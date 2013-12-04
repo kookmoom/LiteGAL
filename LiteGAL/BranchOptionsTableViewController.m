@@ -7,6 +7,7 @@
 //
 
 #import "BranchOptionsTableViewController.h"
+#import "UserDefaultsKey.h"
 
 @interface BranchOptionsTableViewController ()
 
@@ -71,6 +72,9 @@
 {
     [self.branchDelegate updateGameViewAtBranch:indexPath.row];
     [self.navigationController popViewControllerAnimated:YES];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:kUpdate forKey:kUpdateGameView];
 }
 
 /*

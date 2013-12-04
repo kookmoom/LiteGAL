@@ -2,7 +2,7 @@
 //  SaveFile.h
 //  LiteGAL
 //
-//  Created by Artuira on 13-11-24.
+//  Created by Artuira on 13-12-2.
 //  Copyright (c) 2013年 Artuira. All rights reserved.
 //
 
@@ -13,7 +13,7 @@
 
 @interface SaveFile : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * branch;
+@property (nonatomic, retain) NSString * branch;
 @property (nonatomic, retain) NSDate * saveTime;
 @property (nonatomic, retain) NSNumber * screen;
 @property (nonatomic, retain) NSNumber * textRow;

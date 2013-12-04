@@ -131,7 +131,7 @@
 
     }
     
-    else if (self.row == [self.screens count])
+    if (self.row == [self.screens count])
     {
             self.currentScreen = nil;
             self.currentScreen = self.delayScreen;
@@ -139,7 +139,7 @@
             self.row++;
     }
     
-    else
+    else if (self.row > [self.screens count])
     {
             self.delayScreen = nil;
     }
@@ -161,9 +161,19 @@
 - (LiteGALScreen*) loadScreenAtIndex:(NSInteger)row
 {
     
-    self.delayScreen = [self loadingScreenByCurrentWayAtIndex:self.row];
     
-    self.row++;
+    if (self.row < [self.screens count])
+    {
+        self.delayScreen = [self loadingScreenByCurrentWayAtIndex:self.row];
+        self.row++;
+
+    }
+    
+    else
+    {
+        self.delayScreen = nil;
+    }
+
     
     return self.delayScreen;
 }
@@ -173,6 +183,15 @@
 - (LiteGALScreen*) getScreenFromDelegate
 {
     return [self loadingScreenByEfficientlyWay];
+}
+
+#pragma Out Methods
+
+- (NSInteger) getCurrentScreenRow
+{
+    NSInteger row = self.row;
+    row -= 2;
+    return row;
 }
 
 @end

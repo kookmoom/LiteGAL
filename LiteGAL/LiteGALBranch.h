@@ -14,5 +14,5 @@
 @property NSString* nextBranch;
 @property (strong, nonatomic) NSArray *preOptions;
 @property (strong, nonatomic) NSArray *screens;
-
+@property (strong, nonatomic) NSString *branchName;
 @end

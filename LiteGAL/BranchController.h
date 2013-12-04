@@ -19,4 +19,6 @@
 
 - (ScreenFactory*) getCurrentScreenFactory;
 
+- (NSString*) getCurrentBranchName;
+- (NSInteger) getCurrentScreenRow;
 @end

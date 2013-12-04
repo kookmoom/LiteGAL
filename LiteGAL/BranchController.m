@@ -42,6 +42,7 @@
     liteBranch.nextBranch = [branch valueForKey:@"NextBranch"];
     liteBranch.preOptions = [branch valueForKey:@"PreOptions"];
     liteBranch.screens = [branch valueForKey:@"Screens"];
+    liteBranch.branchName = [branch valueForKey:@"BranchName"];
     
     return liteBranch;
 }
@@ -83,6 +84,7 @@
     self.currentBranch = [self loadBranchAtResource:[choosedOptionDic valueForKey:@"NextBranch"]];
     
     if (!self.currentBranch.branch) {
+        //this is branch hasn't preoptions
         return;
     }
     
@@ -113,6 +115,9 @@
 - (void) updateGameViewControllerBySaveData:(NSString *)name atScreenIndex:(NSInteger)screen andTextIndex:(NSInteger)text
 {
     self.currentBranch = [self loadBranchAtResource:name];
+    
+    [self prepareOptions];
+    
     [self setupScreenFactoryWithScreens:self.currentBranch.screens atScreenIndex:screen andTextIndex:text];
 }
 
@@ -251,6 +256,14 @@
     return self.currentScreenFactory;
 }
 
+- (NSString*) getCurrentBranchName
+{
+    return self.currentBranch.branchName ;
+}
 
+- (NSInteger) getCurrentScreenRow
+{
+    return [self.currentScreenFactory getCurrentScreenRow];
+}
 
 @end

@@ -10,6 +10,8 @@
 #import "GameImageView.h"
 #import "BranchController.h"
 
+#import "UserDefaultsKey.h"
+
 #define INIT_SCREEN_ROW 0;
 
 @interface GameViewController ()
@@ -122,6 +124,18 @@
     
 }
 
+- (void) branchDidChange
+{
+    self.screenFactoryDelegate = [self.myBranchController getCurrentScreenFactory];
+    
+    [self getScreenFromFactory];
+    
+    
+    NSInteger row = INIT_SCREEN_ROW;
+    [self updateScreenAtTextIndex:row];
+
+}
+
 - (void) getScreenFromFactory
 {
 //    [self testScreen];
@@ -153,6 +167,15 @@
     
 }
 
+- (void) updateBySaveData:(NSString *)name atScreenIndex:(NSInteger)screen andTextIndex:(NSInteger)text
+{
+    [self.myBranchController updateGameViewControllerBySaveData:name atScreenIndex:screen andTextIndex:text];
+    [self branchDidChange];
+    
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault setObject:kWillLoad forKey:kUpdateGameViewBySaveFile];
+}
+
 
 #pragma mark - ios View Methods
 
@@ -174,13 +197,15 @@
 {
     [super viewWillAppear:animated];
     
-    self.screenFactoryDelegate = [self.myBranchController getCurrentScreenFactory];
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSString* updateState = [userDefault objectForKey:kUpdateGameView];
+    
+    if ([updateState isEqualToString:kUpdate]) {
         
-    [self getScreenFromFactory];
-        
-        
-    NSInteger row = INIT_SCREEN_ROW;
-    [self updateScreenAtTextIndex:row];
+        [self branchDidChange];
+        [userDefault setObject:kDontUpdate forKey:kUpdateGameView];
+    }
+    
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -213,6 +238,6 @@
 
 - (IBAction)saveData:(id)sender {
     
-    [self performSegueWithIdentifier:@"OptionSegue" sender:sender];
+    [self.saveDataDelegate saveFile:[self.myBranchController getCurrentBranchName] atScreen:[self.myBranchController getCurrentScreenRow ]withTextIndex:self.textRow];
 }
 @end

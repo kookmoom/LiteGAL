@@ -15,4 +15,6 @@
 
 - (id)initWithScreens:(NSArray *)screens AtIndex:(NSInteger)row;
 
+- (NSInteger)getCurrentScreenRow;
+
 @end

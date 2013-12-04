@@ -21,11 +21,20 @@
 
 @end
 
+@protocol SaveNewSaveFile <NSObject>
+
+@required
+
+- (void) saveFile:(NSString*)branch atScreen:(NSInteger)screen  withTextIndex:(NSInteger)text;
+
+@end
+
+
 
 @interface GameViewController : UIViewController
 
 @property (weak, nonatomic) id <ScreenDataSourceDelegate> screenFactoryDelegate;
-
+@property (weak, nonatomic) id <SaveNewSaveFile> saveDataDelegate;
 
 - (void) updateBySaveData:(NSString *)name atScreenIndex:(NSInteger)screen andTextIndex:(NSInteger)text;
 
